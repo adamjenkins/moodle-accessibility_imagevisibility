@@ -21,8 +21,10 @@ along with Moodle.  If not, see <https://www.gnu.org/licenses/>. */
  */
 
 body.accessibility-imagevisibility-enabled img:not(.colourdialogue) {
+    /* stylelint-disable-next-line declaration-no-important -- accessibility override must beat theme styles. */
     visibility: hidden !important;
 }
 body.accessibility-imagevisibility-enabled * {
+    /* stylelint-disable-next-line declaration-no-important -- accessibility override must beat theme styles. */
     background-image: unset !important;
 }

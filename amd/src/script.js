@@ -22,7 +22,7 @@
  */
 
 import $ from 'jquery';
-import { saveWidgetConfig } from 'local_accessibility/common';
+import {saveWidgetConfig} from 'local_accessibility/common';
 
 /**
  * Initialisation
@@ -44,7 +44,9 @@ export const init = (data) => {
         let userdata = data;
 
         const updatebtn = () => {
-            $btn.html(userdata ? M.str.accessibility_imagevisibility.showimages : M.str.accessibility_imagevisibility.hideimages);
+            $btn.html(userdata
+                ? M.util.get_string('showimages', 'accessibility_imagevisibility')
+                : M.util.get_string('hideimages', 'accessibility_imagevisibility'));
         };
         updatebtn();
 
